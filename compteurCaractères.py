@@ -28,8 +28,8 @@ def main(argv):
     elif extension.lower() not in AVAILABLES_EXTENSIONS.keys():
         print("Nous ne sommes pas encore mesure de traiter ce type de fichier")
         return False
-
-    results = AVAILABLES_EXTENSIONS[extension.lower()](path)
+    else:
+        results = AVAILABLES_EXTENSIONS[extension.lower()](path)
 
     print_results(results)
     return True
